@@ -16,16 +16,18 @@ else
     <table class="table table-bordered table-hover">
         <thead>
             <tr>
-                Customer
+                <th>Customer</th> 
             </tr>
         </thead>
-     @foreach (var customer in Model)
-        {
-            <tr>
-                <td>
-                    @Html.ActionLink(customer.Name, "Details", "Customers", new { id = customer.Id }, null)
-                </td>
-            </tr>
-        }
+        <tbody>
+           @foreach (var customer in Model)
+              {
+               <tr>
+                   <td>
+                       @Html.ActionLink(customer.Name, "Detail", "Customers", new { id = customer.Id }, null)
+                   </td>
+               </tr>
+            }
+        </tbody>
     </table>
 }
