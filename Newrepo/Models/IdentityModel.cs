@@ -3,9 +3,8 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
-using Newrepo.Models;
 
-namespace Vidly.Models
+namespace Newrepo.Models
 {
     // You can add profile data for the user by adding more properties to your ApplicationUser class, please visit http://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
     public class ApplicationUser : IdentityUser
@@ -23,7 +22,7 @@ namespace Vidly.Models
     {
         public DbSet<Customer> Customers { get; set; }
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("ProjectDB", throwIfV1Schema: false)
         {
         }
 

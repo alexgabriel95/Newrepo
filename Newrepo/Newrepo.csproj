@@ -151,13 +151,30 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201905071302083_InitialModel.cs" />
-    <Compile Include="Migrations\201905071302083_InitialModel.Designer.cs">
-      <DependentUpon>201905071302083_InitialModel.cs</DependentUpon>
+    <Compile Include="Migrations\201905071954599_InitialModel.cs" />
+    <Compile Include="Migrations\201905071954599_InitialModel.Designer.cs">
+      <DependentUpon>201905071954599_InitialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905071957457_AddIsSubscribedToCustomer.cs" />
+    <Compile Include="Migrations\201905071957457_AddIsSubscribedToCustomer.Designer.cs">
+      <DependentUpon>201905071957457_AddIsSubscribedToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905072002064_AddMembershipType.cs" />
+    <Compile Include="Migrations\201905072002064_AddMembershipType.Designer.cs">
+      <DependentUpon>201905072002064_AddMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905072003126_PopulateMembershipTypes.cs" />
+    <Compile Include="Migrations\201905072003126_PopulateMembershipTypes.Designer.cs">
+      <DependentUpon>201905072003126_PopulateMembershipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905072014120_ApplyAnnotationsToCutomerName.cs" />
+    <Compile Include="Migrations\201905072014120_ApplyAnnotationsToCutomerName.Designer.cs">
+      <DependentUpon>201905072014120_ApplyAnnotationsToCutomerName.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\IdentityModel.cs" />
+    <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\RandomMovieViewModel.cs" />
@@ -222,8 +239,20 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201905071302083_InitialModel.resx">
-      <DependentUpon>201905071302083_InitialModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201905071954599_InitialModel.resx">
+      <DependentUpon>201905071954599_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905071957457_AddIsSubscribedToCustomer.resx">
+      <DependentUpon>201905071957457_AddIsSubscribedToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905072002064_AddMembershipType.resx">
+      <DependentUpon>201905072002064_AddMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905072003126_PopulateMembershipTypes.resx">
+      <DependentUpon>201905072003126_PopulateMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905072014120_ApplyAnnotationsToCutomerName.resx">
+      <DependentUpon>201905072014120_ApplyAnnotationsToCutomerName.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
