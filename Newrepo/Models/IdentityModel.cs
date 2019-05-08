@@ -22,6 +22,7 @@ namespace Newrepo.Models
     {
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Movie> Movies { get; set; }
+        public DbSet<MembershipType> MembershioTypes { get; set; }
 
         public ApplicationDbContext()
             : base("NewDB", throwIfV1Schema: false)
