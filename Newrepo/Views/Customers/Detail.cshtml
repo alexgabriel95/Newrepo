@@ -1,4 +1,4 @@
-﻿ @model Newrepo.Models.Customer
+﻿@model Newrepo.Models.Customer
 
 @{
     ViewBag.Title = "Detail";
@@ -6,4 +6,10 @@
 }
 
 <h2>@Model.Name</h2>
-
+<ul>
+    <li>@Html.DisplayNameFor(m => m.MembershipType.Name) : @Model.MembershipType.Name</li>
+    @if (Model.BirthDate.HasValue)
+    {
+        <li>Birthdate: @Model.BirthDate.Value.ToShortDateString()</li>
+    }
+</ul>
