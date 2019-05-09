@@ -30,7 +30,7 @@ namespace Newrepo.Controllers
             {
                 MembershipTypes = membershipTypes
             };
-            return View("New", viewModel);
+            return View("CustomerForm", viewModel);
         }
 
         public ActionResult Index()
@@ -40,11 +40,22 @@ namespace Newrepo.Controllers
             return View(customers);
         }
         [HttpPost]
-        public ActionResult Create(Customer customer)
+        public ActionResult Save(Customer customer)
         {
-            _context.Customers.Add(customer);
+            if (customer.Id == 0)
+            {
+                _context.Customers.Add(customer);
+            }
+            else
+            {
+                var CustomerInDb = _context.Customers.Single(c => c.Id == customer.Id);
+                CustomerInDb.Name = customer.Name;
+                CustomerInDb.BirthDate = customer.BirthDate;
+                CustomerInDb.MembershipTypeId = customer.MembershipTypeId;
+                CustomerInDb.IsSubscribedToNewsletter = customer.IsSubscribedToNewsletter;
+            }
             _context.SaveChanges();
-
+            
             return RedirectToAction("Index", "Customers");
         }
 
@@ -74,7 +85,7 @@ namespace Newrepo.Controllers
                 Customer = customer,
                 MembershipTypes = _context.MembershioTypes.ToList()
             };
-            return View("New", viewModel);
+            return View("CustomerForm", viewModel);
         }
         
 
